@@ -26,13 +26,14 @@ CREATE TABLE IF NOT EXISTS `assets` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table dbkientruchethong.assets: ~0 rows (approximately)
+-- Dumping data for table dbkientruchethong.assets: ~5 rows (approximately)
 INSERT INTO `assets` (`id`, `name`, `description`, `created_at`, `updated_at`, `deleted_at`, `danger_level`) VALUES
-	(1, 'gloves', 'gloves', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 0),
-	(2, 'masks', 'masks', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 0),
-	(3, 'respirators', 'respirators', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 0),
-	(4, 'protective overalls', 'protective overalls', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 0),
-	(5, 'protective glasses', 'protective glasses', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 0);
+	(1, 'Máy tính', 'Máy tính Cấu hình khủng', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 10),
+	(2, 'Laptop', 'Đồ đùng điện tử', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 20),
+	(3, 'PC', 'Đồ đùng điện tử', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 30),
+	(4, 'TV', 'Đồ dùng trong nhà', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 40),
+	(5, 'Điều hòa', 'Điều hòa tốt', '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 50),
+	(6, 'Điện thoại IP 16 UPDATE', 'Điện thoại IP 16 của hãng APPLE UPDATE UPDATE', '2024-09-15 00:39:25', '2024-09-15 00:45:38', '2024-09-15 00:45:38', 69696969);
 
 -- Dumping structure for table dbkientruchethong.migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
@@ -42,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table dbkientruchethong.migrations: ~0 rows (approximately)
+-- Dumping data for table dbkientruchethong.migrations: ~20 rows (approximately)
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_100000_create_password_resets_table', 1),
 	(2, '2016_06_01_000001_create_oauth_auth_codes_table', 1),
@@ -345,7 +346,12 @@ INSERT INTO `stocks` (`id`, `current_stock`, `created_at`, `updated_at`, `delete
 	(22, 0, '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 5, 2),
 	(23, 0, '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 5, 3),
 	(24, 0, '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 5, 4),
-	(25, 0, '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 5, 5);
+	(25, 0, '2024-09-15 00:08:04', '2024-09-15 00:08:04', NULL, 5, 5),
+	(26, 0, '2024-09-15 00:39:25', '2024-09-15 00:39:25', NULL, 6, 1),
+	(27, 0, '2024-09-15 00:39:25', '2024-09-15 00:39:25', NULL, 6, 2),
+	(28, 0, '2024-09-15 00:39:25', '2024-09-15 00:39:25', NULL, 6, 3),
+	(29, 0, '2024-09-15 00:39:25', '2024-09-15 00:39:25', NULL, 6, 4),
+	(30, 0, '2024-09-15 00:39:25', '2024-09-15 00:39:25', NULL, 6, 5);
 
 -- Dumping structure for table dbkientruchethong.teams
 CREATE TABLE IF NOT EXISTS `teams` (
