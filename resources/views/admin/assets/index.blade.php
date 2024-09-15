@@ -4,14 +4,16 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.assets.create") }}">
-                {{ trans('global.add') }} {{ trans('cruds.asset.title_singular') }}
+                {{-- {{ trans('global.add') }} {{ trans('cruds.asset.title_singular') }} --}}
+                Thêm sản phẩm
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.asset.title_singular') }} {{ trans('global.list') }}
+        Danh sách sản phẩm
+        {{-- {{ trans('cruds.asset.title_singular') }} {{ trans('global.list') }} --}}
     </div>
 
     <div class="card-body">
@@ -26,13 +28,15 @@
                             {{ trans('cruds.asset.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.asset.fields.name') }}
+                            {{-- {{ trans('cruds.asset.fields.name') }} --}}
+                            Tên sản phẩm
                         </th>
                         <th>
-                            {{ trans('cruds.asset.fields.description') }}
+                            Mô tả sản phẩm
+                            {{-- {{ trans('cruds.asset.fields.description') }} --}}
                         </th>
                         <th>
-                            Danger level
+                            Giá sản phẩm
                         </th>
                         <th>
                             &nbsp;
@@ -60,13 +64,15 @@
                             <td>
                                 @can('asset_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.assets.show', $asset->id) }}">
-                                        {{ trans('global.view') }}
+                                        {{-- {{ trans('global.view') }} --}}
+                                        Xem 
                                     </a>
                                 @endcan
 
                                 @can('asset_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.assets.edit', $asset->id) }}">
-                                        {{ trans('global.edit') }}
+                                        Chỉnh sửa
+                                        {{-- {{ trans('global.edit') }} --}}
                                     </a>
                                 @endcan
 
@@ -74,7 +80,8 @@
                                     <form action="{{ route('admin.assets.destroy', $asset->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        {{-- <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}"> --}}
+                                        <input type="submit" class="btn btn-xs btn-danger" value="Xóa">
                                     </form>
                                 @endcan
 

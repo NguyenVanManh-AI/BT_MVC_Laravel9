@@ -3,7 +3,8 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.asset.title') }}
+        Chi tiết sản phẩm
+        {{-- {{ trans('global.show') }} {{ trans('cruds.asset.title') }} --}}
     </div>
 
     <div class="card-body">
@@ -25,7 +26,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.asset.fields.name') }}
+                            {{-- {{ trans('cruds.asset.fields.name') }} --}} Tên sản phẩm
                         </th>
                         <td>
                             {{ $asset->name }}
@@ -33,7 +34,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.asset.fields.description') }}
+                            {{-- {{ trans('cruds.asset.fields.description') }} --}} Mô tả sản phẩm
                         </th>
                         <td>
                             {{ $asset->description }}
@@ -41,7 +42,7 @@
                     </tr>
                     <tr>
                         <th>
-                            Danger level
+                            {{-- Danger level --}} Giá 
                         </th>
                         <td>
                             {{ $asset->danger_level }}

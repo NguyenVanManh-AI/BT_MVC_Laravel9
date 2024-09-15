@@ -2,7 +2,7 @@
     <nav class="sidebar-nav">
 
         <ul class="nav">
-            @can('user_management_access')
+            {{-- @can('user_management_access')
                 <li class="nav-item nav-dropdown">
                     <a class="nav-link  nav-dropdown-toggle" href="#">
                         <i class="fa-fw fas fa-users nav-icon">
@@ -53,18 +53,19 @@
                         @endcan
                     </ul>
                 </li>
-            @endcan
+            @endcan --}}
             @can('asset_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.assets.index") }}" class="nav-link {{ request()->is('admin/assets') || request()->is('admin/assets/*') ? 'active' : '' }}">
                         <i class="fa-fw fas fa-cogs nav-icon">
 
                         </i>
-                        {{ trans('cruds.asset.title') }}
+                        Quản lí sản phẩm
+                        {{-- {{ trans('cruds.asset.title') }} --}}
                     </a>
                 </li>
             @endcan
-            @can('stock_access')
+            {{-- @can('stock_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.stocks.index") }}" class="nav-link {{ request()->is('admin/stocks') || request()->is('admin/stocks/*') ? 'active' : '' }}">
                         <i class="fa-fw fas fa-cogs nav-icon">
@@ -94,13 +95,14 @@
                         </a>
                     </li>
                 @endcan
-            @endif
+            @endif --}}
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
                     </i>
-                    {{ trans('global.logout') }}
+                    Đăng xuất
+                    {{-- {{ trans('global.logout') }} --}}
                 </a>
             </li>
         </ul>
